@@ -28,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>GitHub Usercard</h1>
+        <h1 className='title'>GitHub Usercard</h1>
         <UserCard 
           props={this.state}
         />

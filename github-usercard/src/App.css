@@ -1,4 +1,31 @@
 .App {
+  max-width: 992px;
+  margin: 0 auto;
   text-align: center;
+  font-size: 62.5%;
+  background-color: #C0E6DE;
+  height: 100vh;
 }
-
+.title {
+  margin-top: 0;
+  padding-top: 20px;
+  font-size: 2rem;
+}
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.user-img {
+  width: 420px;
+  border-radius: 5px;
+}
+.user-info {
+  font-size: 2rem;
+  padding-left: 40px;
+  text-align: left;
+}
+.bio {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
