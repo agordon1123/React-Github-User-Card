@@ -1,4 +1,5 @@
 import React from 'react';
+import Followers from './Followers';
 
 const UserCard = props => {
     console.log('props ', props)
@@ -13,8 +14,7 @@ const UserCard = props => {
                 <p>{props.props.name}</p>
                 <p>{props.props.login}</p>
                 <p>{props.props.location}</p>
-                <p>Followers: {props.props.followers}</p>
-                <p>Following: {props.props.following}</p>
+                <Followers />
                 <p className='bio'>{props.props.bio}</p>
             </div>
         </div>

@@ -3,7 +3,7 @@
   margin: 0 auto;
   text-align: center;
   font-size: 62.5%;
-  background-color: #C0E6DE;
+  background-color: #F6F8FA;
   height: 100vh;
 }
 .title {
@@ -22,7 +22,6 @@
 }
 .user-info {
   font-size: 2rem;
-  padding-left: 40px;
   text-align: left;
 }
 .bio {
