@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
 import Axios from 'axios';
+import UserCard from './components/UserCard';
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      data: {}
-    }
+    this.state = []
   }
 
   componentDidMount() {
@@ -30,6 +29,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>GitHub Usercard</h1>
+        <UserCard 
+          props={this.state}
+        />
       </div>
     );
   
