@@ -4,8 +4,11 @@ import Axios from 'axios';
 class Followers extends React.Component {
     constructor() {
         super();
-        this.state = []
+        this.state = {
+            data: []
+        }
     }
+
     componentDidMount() {
         this.fetchFollowerData();
     }
@@ -13,22 +16,24 @@ class Followers extends React.Component {
     fetchFollowerData = () => {
         Axios('https://api.github.com/users/agordon1123/followers')
           .then(res => {
-              this.setState(res.data)
-                console.log('res.data ', res.data)
-                console.log('this.state ', this.state)
+              this.setState({ data: res.data })
           })
           .catch(err => {
             console.log('err ', err)
           })
       }
-    
+
     render() {
         return (
-            <>
+            <div>
                 <p>Followers:</p>
-        {/* {this.state.map(el => { return <img src={el.avatar_url} />})} */}
-            </>
-        )
+                {this.state.data.map(el => {
+                    return (
+                        <img className='follower-images' src={el.avatar_url} />
+                    )
+                })}
+            </div>
+        )    
     }
 }
 

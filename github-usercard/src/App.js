@@ -2,26 +2,28 @@ import React from 'react';
 import './App.css';
 import Axios from 'axios';
 import UserCard from './components/UserCard';
+import Followers from './components/Followers';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      user: [],
+      followers: []
     }
   }
 
   componentDidMount() {
     this.fetchData();
-    // this.fetchFollowerData();
   }
 
   fetchData = () => {
     Axios('https://api.github.com/users/agordon1123')
       .then(res => {
-        this.setState(res.data)
+        this.setState({...this.state, user: res.data})
         console.log('res.data ', res.data)
         console.log('this.state ', this.state)
+        console.log('this.state.user ', this.state.user)
       })
       .catch(err => {
         console.log('err ', err)
@@ -42,8 +44,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className='title'>GitHub Usercard</h1>
+        {console.log(this.state)}
         <UserCard 
-          props={this.state}
+          props={this.state.user}
+          // props2={this.state.followers}
         />
       </div>
     );
