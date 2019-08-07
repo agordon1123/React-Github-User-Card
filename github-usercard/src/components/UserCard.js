@@ -8,7 +8,9 @@ const UserCard = props => {
     return (
         <div className='user-card'>
             <div>
-                <img className='user-img' src={props.props.avatar_url} key={Date.now()} />
+                <a href={props.props.html_url}>
+                    <img className='user-img' src={props.props.avatar_url} key={Date.now()} />
+                </a>
             </div>
 
             <div className='user-info'>

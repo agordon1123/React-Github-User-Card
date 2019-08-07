@@ -49,6 +49,7 @@ class App extends React.Component {
           props={this.state.user}
           // props2={this.state.followers}
         />
+        <img className='chart' src="http://ghchart.rshah.org/agordon1123" alt="2016rshah's Github chart" />
       </div>
     );
   

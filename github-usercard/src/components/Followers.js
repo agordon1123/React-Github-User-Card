@@ -28,8 +28,11 @@ class Followers extends React.Component {
             <div>
                 <p>Followers:</p>
                 {this.state.data.map(el => {
+                    console.log(el)
                     return (
-                        <img className='follower-images' src={el.avatar_url} />
+                        <a href={el.html_url}>
+                            <img alt={el.login} className='follower-images' src={el.avatar_url} />
+                        </a>
                     )
                 })}
             </div>
